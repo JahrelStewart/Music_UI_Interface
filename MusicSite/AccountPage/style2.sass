@@ -1,0 +1,1152 @@
+html, body
+    height: 100%
+    background-color: #22223b
+    cursor: url('../pic/point.svg'), auto
+
+    #cursors
+        position: absolute
+        height: 30px
+        width: 30px
+        border-radius: 50%
+        border: 2px solid #FDE8E9
+        opacity: 0.5
+        pointer-events: none
+        transition: transform 0.2s
+        z-index: 1
+
+    .container-fluid
+        position: relative
+        z-index: 0
+        background-color: #22223b
+        height: 100%
+        overflow: hidden
+        user-select: none
+        -webkit-user-select: none
+        user-drag: none
+        -webkit-user-drag: none
+        overflow-y: auto
+
+        .row:nth-child(1)
+            position: relative
+            top: 0px
+            background-color: transparent
+            z-index: 8
+
+            .headerz 
+                position: relative
+                padding-left: 0px
+                padding-right: 0px
+                height: 85px
+
+            .header
+                position: fixed
+                padding-left: 0px
+                padding-right: 0px
+                height: 85px
+                background-color: #22223b
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                .top:nth-child(1)
+                    position: absolute
+                    left: 58px
+                    
+                    .clipping
+                        position: relative
+                        width: 124px
+                        height: 44px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        
+                        #block 
+                            position: absolute
+                            display: flex
+                            flex-direction: row
+                            flex-wrap: nowrap
+                            align-items: flex-end
+                            align-self: flex-start
+                            justify-content: center
+                            width: 20%
+                            height: 85%
+                            z-index: 0
+                                                    
+                            div 
+                                position: relative
+                                border-radius: 20px
+                                width: 3px
+                                margin-left: 1px
+                                margin-right: 1px
+                                background-color: #c9ada7
+
+                        #glass
+                            background-color: transparent
+                            position: absolute
+                            height: 150%
+                            width: 105%
+                            z-index: 1
+
+                        svg
+                            position: absolute
+                            z-index: 2
+                            align-self: flex-end
+                            width: 83px
+
+                            #text
+                                font-family: Rum Raisin   
+                                fill: #F4E8C1
+                                font-size: 50px
+                                -webkit-user-select: none
+                                user-select: none
+
+                .top:nth-child(2)
+                    position: absolute
+                    background-color: #22223b
+                    color: #FDE8E9
+                    top: 5px    
+                    align-self: center
+                    font-family: Ruluko
+                    border-radius: 10px
+                
+                    .search
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        -webkit-user-select: none
+                        user-select: none
+                        border-radius: 10px
+
+                        .search-text
+                            text-align: center
+                            font-size: 12px
+                            letter-spacing: 2px
+                            padding-bottom: 4px
+                            opacity: 0
+                            transition: opacity 1.5s
+
+                        .search-area
+                            position: relative
+                            width: 455px
+                            min-height: 35px
+                            height: 35px
+                            box-sizing: border-box
+                            background-color: #22223b
+                            display: grid
+                            grid-template-columns: 40px 1fr
+                            grid-template-rows: 35px 
+                            justify-items: center
+                            align-items: center
+                            transition: height 0.5s, box-shadow 0.5s
+                            overflow: hidden
+                            border-bottom: 1px solid #c9ada7
+                            border-top-left-radius: 10px
+                            border-top-right-radius: 10px
+
+                            searching
+                                grid-row-start: 1
+ 
+                            .searching:nth-child(1)
+                                grid-column-start: 1
+                                // align-self: center
+                                height: 20px
+                                width: 20px                             
+                                // border: 1px solid white
+                            
+                            .searching:nth-child(2)
+                                grid-column-start: 2
+                                color: #FDE8E9
+                                background-color: transparent
+                                height: 100%
+                                width: 100%
+                                border: none
+                                outline: none 
+                            
+                            .searching:nth-child(3)
+                                position: absolute
+                                color:#FDE8E9
+                                font-family: Ruluko
+                                top: 30px
+                                width: 100%
+
+                                .back-search
+                                            
+                                    .searchdrop:nth-child(1)
+                                        white-space: nowrap
+                                        margin-top: 10px
+                                        margin-left: 8px
+                                        font-size: 14px
+                                        opacity: 0.5
+                            
+                                    .searchdrop:nth-child(2)
+
+                                        .drop-list
+                                            list-style-type: none  
+                                            white-space: nowrap
+                                            padding-top: 4px
+                                            padding-bottom: 4px
+                                            padding-left: 10%
+                                            border-left: 0px solid #22223b
+                                            transition: border 0.25s
+
+                                        .drop-list:hover
+                                            border-left: 4px solid #22223b
+                                            background-color: rgba(232, 182, 255, 0.1)
+                                            border-radius: 8px           
+                    
+                .top:nth-child(3)
+                    position: absolute
+                    background-color: #22223b
+                    font-size: 16px
+                    font-family: Ruluko
+                    align-self: flex-end
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    width: 290px
+                    right: 58px
+
+                    .top-buts
+                        width: 90px
+                        height: 30px
+                        border-radius: 30px
+                        box-sizing: border-box
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        // box-shadow: 5px 5px 8px #151525, -5px -5px 8px #2f2f51, inset 0 0 0 transparent, inset 0 0 0 transparent
+                        transition: box-shadow 0.1s ease-out, border-radius 0.4s
+                        
+                    .top-buts:active
+                        // box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset 5px 5px 5px #1b1b2f, inset -5px -5px 5px #292947
+
+                    .but-content
+                        width: 100% 
+                        height: 95%
+                        color: #FDE8E9
+                        padding-top: 3px
+                        text-align: center
+                        align-self: center
+                        transform: scale(1)
+                        transition: transform 0.15s 
+
+                    .but-content:active
+                        transform: scale(0.95)
+
+                    .but-content:hover
+                        color: #c9ada7
+                    
+                    .but-content::selection 
+                        color: none
+                        background: none
+
+                    .top-buts:nth-child(3)
+                        width: 45px
+                        height: 40px
+
+                        .but-content
+                            filter: invert(100%) sepia(48%) saturate(1342%) hue-rotate(289deg) brightness(103%) contrast(106%)
+                            width: 40px
+                            height: 40px
+                            padding: 0px 6px
+                .butDrops 
+                    position: absolute
+                    align-self: flex-end
+                    top: 65px
+                    right: 58px
+                    width: 150px
+                    height: 100px 
+                    display: none 
+                    flex-direction: column
+                    justify-content: space-evenly
+                    align-items: center
+                    font-size: 16px
+                    font-family: Ruluko
+                    color: #FDE8E9
+                    background-color: #22223b
+                    border-radius: 10px
+                    z-index: 10
+                    border: 1px solid #c9ada7
+                    box-shadow: 5px 5px 5px #1b1b2fbe, -5px -5px 5px #1b1b2fbe
+
+                    .options
+                        width: auto
+                        text-align: right
+                        border-bottom: 1px solid #4d6bff6c
+        
+        .row:nth-child(2)
+                    position: relative
+                    height: 25%
+                    display: none
+                    z-index: 6
+
+                    .bodyAccountR
+                        position: relative
+                        height: 100%
+                        width: 100%
+                        background-color: #22223bb7
+                        display: flex
+                        justify-content: center
+                        flex-direction: row
+                        background-image: url('../pic/tyler.png')
+                        background-position: center center
+                        background-repeat: no-repeat 
+                        background-size: 800px 550px
+                        background-blend-mode: darken 
+                        padding: 5px
+                        background-clip: content-box
+                        box-shadow: inset 0px 0px 50px 75px rgba(34, 34, 59, 1)
+                        // border-radius: 50%
+                        // mix-blend-mode: darken
+                        z-index: 2
+                        
+                        .paneR
+                            margin-right: 10px
+                            height: 100%
+                            width: 90%
+                            align-self: center
+                            color: rgba(253, 232, 233, 0.8)
+                            font-family: Ruluko
+                            text-align: center
+                            border-radius: 10px
+                            display: grid
+                            grid-template-columns: max-content 1fr
+                            grid-gap: 2%
+                            justify-items: start
+                            align-content: center
+                            
+                            .proPicR    
+                                grid-column-start: 1
+                                width: 150px
+                                height: 150px
+                                background-image: url('../pic/tyler.png')
+                                background-position: center center
+                                background-repeat: no-repeat 
+                                background-size: 150px 150px  
+
+                            .detailsR
+                                grid-column-start: 2
+                                display: grid
+                                grid-template-rows: min-content min-content min-content 40px 
+                                justify-items: start
+                                grid-gap: 2%
+
+                                .paneHeadingR
+                                    color: #FDE8E9
+                                    grid-row-start: 1
+                                    font-size: 20px
+
+                                .setsR
+                                    font-size: 16px
+                                    align-self: center
+                                    width: 80%
+
+                                .set1R
+                                    grid-row-start: 2
+                                    width: 210px
+                                    display: flex
+                                    flex-direction: row
+                                    justify-content: space-between
+                                    flex-wrap: wrap
+
+                                    .followR
+                                        width: 90px
+                                        border-radius: 6px
+                                        background-color: #4d6bff
+                                        
+                                    .messageR
+                                        width: 90px
+                                        border-radius: 6px
+                                        background-color: #4d6bff
+
+                                .set2R
+                                    grid-row-start: 3
+                                    display: flex
+                                    justify-content: space-evenly
+
+                                    .followersR
+                                        font-size: 13px
+                                        color: #fde8e97e
+
+                                        .amtR
+                                            font-size: 20px
+                                            color: #FDE8E9
+                                    
+                                .set3R
+                                    grid-row-start: 4
+                                    width: 100%
+                                    display: flex
+                                    justify-content: space-evenly
+                                    
+                                    .thumbsR
+                                        width: 40px
+                                        background-position: center left
+                                        background-repeat: no-repeat
+
+                                    .youR
+                                        background-image: url('../pic/you.svg')
+                    
+                                    .instaR
+                                        background-image: url('../pic/insta.svg')
+                                    
+                                    .faceR
+                                        background-image: url('../pic/face.svg')
+                                    
+                                    .tweetR
+                                        background-image: url('../pic/tweet.svg')
+
+        .row:nth-child(3)
+            position: relative
+            height: 42px    
+            display: flex
+            flex-direction: row
+            justify-content: center
+            z-index: 4
+
+            .headings
+                position: relative
+                width: 40%
+                height: 100%
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+
+                .heading
+                    align-self: center
+                    font-family: Ruluko
+                    font-size: 15px
+                    color: #FDE8E9
+                
+                .heading:hover
+                    color: #c9ada7
+                                
+                .heading::selection 
+                    color: none
+                    background: none
+
+                .heading:nth-child(1)
+                    transform: scale(1.4)
+                        
+            #animeCircle
+                position: absolute
+                top: 42px
+
+        .row:nth-child(4)
+            position: relative  
+            top: 13px
+            left: 16px
+            height: 80%
+            display: grid
+            grid-template-columns: 70% 25px 1fr
+            overflow: hidden
+            z-index: 2
+            
+            .bodyCenter
+                position: relative
+                height: 100%
+                padding-top: 10px
+                grid-column-start: 1 
+                display: flex
+                justify-content: center
+                z-index: 1
+
+                #chartContainer
+                    width: 95%
+                    display: flex
+                    justify-content: center
+                    flex-wrap: wrap
+
+                    .bodyDetail
+                        // border-radius: 10px
+                        // border-bottom: 2px solid #c9ada78e
+                        // box-shadow: 5px 5px 8px #151525, -5px -5px 8px #2f2f51, inset 0 0 0 transparent, inset 0 0 0 transparent
+                        
+
+                    .nonCharts
+                        display: grid
+                        grid-template-rows: repeat(2, max-content)
+                        grid-gap: 3%
+
+                        .buyers
+                            grid-row-start: 1
+                            display: grid
+                            height: 240px
+                            grid-template-rows: 30% repeat(4, 35px) 10%
+                            justify-items: center
+                            color: rgba(253, 232, 233, 0.8)
+                            font-family: Ruluko
+                            border-bottom: 2px solid #c9ada78e
+                            border-right: 2px solid #c9ada78e
+                            border-bottom-right-radius: 10px
+
+                            .buyerHeading
+                                position: relative
+                                align-self: center
+                                grid-row-start: 1
+                                font-size: 30px
+                                text-align: center
+                            
+                            .rows
+                                position: relative
+                                align-self: center
+                                display: grid
+                                width: 80%
+                                grid-template-columns: repeat(2, 50%)
+                                font-size: 16px
+                                border-block-end-width: 1px
+                                border-bottom: 1px solid #fde8e93a
+                                
+                            .buyRows:nth-child(1)
+                                grid-row-start: 2
+                            
+                            .buyRows:nth-child(2)
+                                grid-row-start: 3
+                            
+                            .buyRows:nth-child(3)
+                                grid-row-start: 4
+                            
+                            .buyRows:nth-child(4)
+                                grid-row-start: 5
+
+                            .text
+                                grid-column-start: 1
+                                text-align: left
+                            
+                            .price
+                                grid-column-start: 2
+                                text-align: right                               
+                        
+                        .listens
+                            grid-row-start: 2
+                            display: grid
+                            height: 240px
+                            grid-template-rows: 23%  7% repeat(4, 35px) 10%
+                            justify-items: center
+                            color: rgba(253, 232, 233, 0.8)
+                            font-family: Ruluko
+                            border-bottom: 2px solid #c9ada78e
+                            border-right: 2px solid #c9ada78e
+                            border-bottom-right-radius: 10px
+
+                            .listensHeading
+                                position: relative
+                                align-self: center
+                                grid-row-start: 1
+                                font-size: 30px
+                                text-align: center
+                            
+                            .listensLabel
+                                grid-row-start: 2
+                                font-size: 13px
+                                opacity: 0.5
+                                width: 80%
+                                text-align: right
+                                // border: 1px solid white
+                            
+                            .lRows
+                                position: relative
+                                align-self: center
+                                display: grid
+                                width: 80%
+                                grid-template-columns: repeat(2, 50%)
+                                font-size: 16px
+                                border-block-end-width: 1px
+                                border-bottom: 1px solid #fde8e93a
+                                
+                            .listensRows:nth-child(1)
+                                grid-row-start: 3
+                            
+                            .listensRows:nth-child(2)
+                                grid-row-start: 4
+                            
+                            .listensRows:nth-child(3)
+                                grid-row-start: 5
+                            
+                            .listensRows:nth-child(4)
+                                grid-row-start: 6
+
+                            .text
+                                grid-column-start: 1
+                                text-align: left
+                            
+                            .price
+                                grid-column-start: 2
+                                text-align: right
+                    
+                    .charts
+                        margin-top: 0px
+                        height: auto
+                        display: grid
+                        grid-template-rows: 80% 45%
+                        grid-gap: 3%
+
+                        .monProgress
+                            grid-row-start: 1
+                            height: 100%
+                            display: grid
+                            grid-template-rows: 20% auto
+                            justify-items: center
+                            color: rgba(253, 232, 233, 0.8)
+                            grid-gap: 2%
+                            font-family: Ruluko
+                            font-size: 30px
+                            border-bottom: 2px solid #c9ada78e
+                            border-left: 2px solid #c9ada78e
+                            border-bottom-left-radius: 10px
+
+                            .monHeading
+                                grid-row-start: 1
+                                align-self: center
+
+                            .monBody
+                                position: relative
+                                max-height: 100%
+                                height: auto
+                                max-width: 90%
+                                width: 90%
+                                grid-row-start: 2
+                                background-image: url('../pic/graph.svg')
+                                background-position: center center
+                                background-repeat: no-repeat
+                                background-size: 90% auto
+
+                        .beatStats
+                            grid-row-start: 2  
+                            height: 100% 
+                            display: grid
+                            grid-template-rows: 20% auto
+                            grid-gap: 2%
+                            justify-items: center
+                            color: rgba(253, 232, 233, 0.8)
+                            font-family: Ruluko
+                            font-size: 30px     
+                            border-bottom: 2px solid #c9ada78e
+                            border-left: 2px solid #c9ada78e  
+                            border-bottom-left-radius: 10px 
+
+                            .beatHeading
+                                grid-row-start: 1
+                                align-self: center
+
+                            .beatBody
+                                position: relative
+                                max-width: 90%
+                                height: auto
+                                grid-row-start: 2
+                                width: 90%
+                                background-image: url('../pic/pie.svg')
+                                background-position: center center
+                                background-repeat: no-repeat 
+                                background-size: 90% auto        
+                  
+            .bodyScroll
+                position: relative
+                max-height: 581px
+                height: 578px
+                grid-column-start: 2
+                display: flex
+                flex-direction: row
+                justify-content: center
+                z-index: 3
+                
+                .scroll
+                    position: relative
+                    height: 100%
+                    width: 25%
+                    background-color: #FDE8E9
+                    display: grid
+                    justify-content: center
+
+                    .scrollThumb
+                        position: relative
+                        width: 25px
+                        border-radius: 5px
+                        background-color: #FDE8E9
+                  
+            .bodyAccount
+                position: relative
+                height: 100%
+                background-color: #22223bb7
+                grid-column-start: 3
+                display: flex
+                justify-content: center
+                flex-direction: row
+                background-image: url('../pic/tyler.png')
+                background-position: center center
+                background-repeat: no-repeat 
+                background-size: 1150px 1150px 
+                box-shadow: inset 0px 0px 110px 120px rgba(34, 34, 59, 1)
+                mix-blend-mode: darken
+                z-index: 2
+
+                .pane
+                    margin-right: 10px
+                    height: 90%
+                    width: 85%
+                    align-self: center
+                    color: rgba(253, 232, 233, 0.8)
+                    font-family: Ruluko
+                    text-align: center
+                    border-radius: 10px
+                    display: grid
+                    grid-template-rows: 10% 40% min-content 40px 40px
+                    grid-gap: 5%
+                    justify-items: center
+
+                    .paneHeading
+                        color: #FDE8E9
+                        grid-row-start: 1
+                        font-size: 30px
+                    
+                    .proPic
+                        grid-row-start: 2
+                        width: 100%
+                        background-image: url('../pic/tyler.png')
+                        background-position: center center
+                        background-repeat: no-repeat 
+                        background-size: 200px 200px  
+                        // border: 1px solid white
+
+                    .sets
+                        font-size: 20px
+                        align-self: center
+                        width: 80%
+
+                    .set1
+                        grid-row-start: 3
+                        width: 75%
+                        display: flex
+                        flex-direction: row
+                        justify-content: space-between
+                        flex-wrap: wrap
+
+                        .follow
+                            width: 100px
+                            border-radius: 6px
+                            background-color: #4d6bff
+                            
+                        .message
+                            width: 100px
+                            border-radius: 6px
+                            background-color: #4d6bff
+
+                    .set2
+                        grid-row-start: 4
+                        display: flex
+                        justify-content: space-evenly
+
+                        .followers
+                            font-size: 13px
+                            color: #fde8e97e
+
+                            .amt
+                                font-size: 25px
+                                color: #FDE8E9
+                        
+                    .set3
+                        grid-row-start: 5
+                        width: 80%
+                        display: flex
+                        justify-content: space-evenly
+                        
+                        .thumbs
+                            width: 40px
+                            background-position: center center
+                            background-repeat: no-repeat
+
+                        .you
+                            background-image: url('../pic/you.svg')
+         
+                        .insta
+                            background-image: url('../pic/insta.svg')
+                        
+                        .face
+                            background-image: url('../pic/face.svg')
+                        
+                        .tweet
+                            background-image: url('../pic/tweet.svg')
+
+
+        .trackContainer
+            position: fixed
+            z-index: 8
+            top: 140px
+            left: 0px
+            height: 550px
+            width: 10px
+            -webkit-user-select: none
+            user-select: none
+
+            .slideContainer
+                position: absolute
+                left: 0px
+                height: 100%
+                width: 100%
+                            
+                .sliderBar
+                    position: absolute
+                    z-index: 1
+                    background-color: #FDE8E9
+                    height: 100%
+                    width: 100%
+                    display: flex
+                    border-radius: 2px
+                    flex-direction: column
+                    justify-content: flex-end
+        
+                    .bar 
+                        background-color: #4d6bff
+                        width: 100%
+                        height: 200px
+                        border-radius: 2px                       
+                        
+                input[type="range"] 
+                    transform: rotate(270deg)
+
+
+                .slider
+                    position: absolute
+                    z-index: 3
+                    -webkit-appearance: none
+                    appearance: none
+                    outline: none   
+                    top: 279px
+                    height: 100%
+                    width: 557px
+                    background-color: transparent
+                    border-radius: 2px
+                    transform-origin: center left
+                    pointer-events: none               
+                                
+                .slider::-webkit-slider-thumb
+                    -webkit-appearance: none
+                    appearance: none
+                    height: 18px
+                    width: 18px
+                    margin-top: 18px
+                    border-radius: 5px
+                    background-color: #FDE8E9
+                    border: 5px solid #22223b 
+                    pointer-events: auto
+                    cursor: url('../pic/point.svg'), auto
+                    
+        #musicGuide
+            position: fixed
+            left: 35px
+            transition: opacity 0.5s
+            z-index: 10
+            mix-blend-mode: difference
+
+            #play 
+                position: absolute
+                transform: scale(1.2)
+                opacity: 0
+                transition: opacity 0.5s
+            
+            #updown
+                position: absolute
+                opacity: 0
+                transition: opacity 0.5s
+        
+        .card
+            position: fixed
+            left: 0px
+            z-index: 7
+            top: 137px
+            height: 554px
+            width: 10px
+            background-color: #22223B
+            border: 0px solid transparent
+
+            .record
+                position: absolute
+                z-index: 0
+                left: 12px
+                bottom: 13px
+
+            .cardInner
+                position: absolute
+                z-index: 1
+                top: 3px
+                bottom: 0.3px
+                width: 400px
+                display: flex
+                justify-content: center
+                border-radius: 10px
+                background-color: #22223B
+                -webkit-clip-path: url(#clippy)
+                clip-path: url(#clippy)  
+                border: 1px solid #FDE8E9
+            
+                .cardBackContainer
+                    position: absolute   
+                    height: 100%
+                    width: 95%
+                    align-self: center
+                    border-radius: 10px
+                    // border: 1px solid #FDE8E9
+
+                    .cardBack
+                        position: absolute
+                        height: 100%
+                        width: 100%
+                        opacity: 0.2
+                        background-repeat: no-repeat
+                        background-position: center top
+                        background-size: cover
+                        z-index: -10
+
+                .cardBackContainer::before
+                    content: ''
+                    box-shadow: inset 0px 0px 100px 100px rgba(34, 34, 59, 1)
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+                .cardShow
+                    position: absolute
+                    height: 100%
+                    width: 97%
+                    left: 3%
+                    display: grid
+                    grid-template-rows: min-content auto 40px auto
+                    grid-template-columns: auto 
+                    align-content: center
+                    justify-content: center
+                    // border: 1px solid white
+
+                    .oneLine
+                        position: relative
+                        display: inline-block
+                        height: auto
+                        width: auto
+                        font-family: Ruluko
+                        font-size: 40px
+                        letter-spacing: 7px
+                        text-align: center
+                        font-weight: bold
+                        grid-row-start: 1
+                        grid-column-start: 1
+                        color: rgba(253, 232, 233, 1)
+                        border-block-end-width: 3px
+                        border-bottom: 2px solid #FDE8E9
+                    
+                    .twoLine
+                        position: relative
+                        display: inline-block
+                        height: auto
+                        width: auto
+                        font-family: Ruluko
+                        font-size: 18px
+                        text-align: right
+                        grid-row-start: 2
+                        grid-column-start: 1
+                        color: rgba(253, 232, 233, 0.6)
+                        // border: 1px solid #FDE8E9
+                    
+                    .threeLine
+                        position: relative
+                        display: inline-grid
+                        height: auto
+                        width: auto
+                        grid-template-columns: repeat(3, 100px)
+                        grid-row-start: 4
+                        justify-content: center
+                        grid-column-start: 1
+                        // border: 1px solid #ffffff
+
+                        .backNext
+                            grid-column-start: 1
+                            height: 40px
+                            background-image: url('../pic/next.svg')
+                            background-repeat: no-repeat
+                            background-position: center left
+                            transform: rotate(180deg)
+                            // border: 1px solid #FDE8E9
+
+                        .plays
+                            grid-column-start: 2
+                            height: 40px
+                            background-image: url('../pic/pausing.svg')
+                            background-repeat: no-repeat
+                            background-position: center center
+                            background-size: 17px 17px
+                            // border: 1px solid #FDE8E9
+                        
+                        .forwardNext
+                            grid-column-start: 3
+                            height: 40px
+                            background-image: url('../pic/next.svg')
+                            background-repeat: no-repeat
+                            background-position: center left
+                            // border: 1px solid #FDE8E9
+
+            #circleExpand
+                position: absolute
+                z-index: 2
+
+                #grow
+                    position: absolute
+                
+                #grow2
+                    position: absolute
+
+@media (max-width: 1200px)
+    #topSides
+        width: auto
+
+        #login
+            display: none
+        
+        #signup
+            display: none
+        
+    #set1
+        width: 50%
+
+        #message
+            margin-top: 10px
+    
+    #set2
+        width: 100%
+    
+    #set3
+        width: 100%
+
+@media (max-width: 1150px)
+    #bodies
+        overflow-y: hidden
+        grid-template-columns: 1fr 25px 20px
+
+        #bodyAccount
+            display: none
+    
+    #resizeHead
+        display: block
+
+@media (max-width: 990px)
+    #bodies
+        #chartContainer
+            width: 65%
+
+            #nonCharts
+
+                #buyers
+                    border-right: 0px
+                    border-bottom-right-radius: 0px
+
+                #listens
+                    border-right: 0px
+                    border-bottom-right-radius: 0px
+
+            #charts
+                margin-top: 40px
+                height: 400px
+                
+                #monProgress
+                    border-left: 0px
+                    border-bottom-left-radius: 0px
+
+                    #monBody
+                        width: 300px
+                        max-width: 300px
+                        background-size: 300px auto
+                
+                #beatStats
+                    border-left: 0px
+                    border-bottom-left-radius: 0px
+
+                    #beatBody
+                        width: 300px
+                        max-width: 300px
+                        background-size: 300px auto
+     
+
+
+@media (max-width: 880px)
+    #searchSec
+        right: 130px
+        align-self: flex-end
+        top: unset
+        border-radius: 0px
+    
+    #search-text
+        display: none
+
+    #searchbar
+        display: none
+    
+    #searchDropping
+        display: none
+        
+    #search-area
+        height: 40px
+        width: 45px
+        // border-radius: 30px
+        grid-template-columns: 45px
+        grid-template-rows: 40px
+        // box-shadow: 5px 5px 8px #151525, -5px -5px 8px #2f2f51, inset 0 0 0 transparent, inset 0 0 0 transparent
+    
+    #headings
+        width: 90%
+    
+    #animeCircle
+        width: 90%  
+
+// @media (max-width: 750px)
+
+// @media (max-width: 600px) 
+
+@media (max-width: 575px)
+    #resizeHead
+        height: 30%
+
+        #paneR
+            grid-gap: 4%
+            align-items: center
+
+            #detailsR
+                grid-gap: 1%
+
+                #set1R
+                    width: 100px
+                    margin-top: 5px
+                    
+                    #followR
+                        margin-top: 5px
+                    #messageR
+                        margin-top: 5px
+
+@media (max-width: 470px)    
+    #cards
+
+        #cardInner
+            width: 340px
+
+            #oneLine
+                font-size: 25px
+            
+            #twoLine
+                font-size: 16px
+
+    #bodies
+        #chartContainer
+            width: 95%
+
+@media (max-width: 390px)    
+    #pageHead
+        left: 10px
+    
+    #topSides
+        right: 10px
+
+    #searchSec
+        right: 75px
+    
+    #butDrops
+        right: 10px
+
+// @media (max-width: 380px) 

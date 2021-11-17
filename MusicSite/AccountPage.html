@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Rum+Raisin:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ruluko:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <div id="cursors"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="headerz"></div>
+            <div class="col-12 header">
+
+                <div class="top">
+                    <div class="clipping">
+                        <div id="block"></div>
+                        <div id="glass"></div>
+                        <svg id="logo" width="110" height="45">
+                            <defs>
+                                <text id="text" x="0" y="40">Beet</text>
+                            </defs> 
+                            <use xlink:href="#text"/> 
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="top" id="searchSec">
+                    <div class="search">
+                        <div class="search-text" id="search-text">HIT 'ENTER' TO SEARCH</div>
+                        <div class="search-area" id="search-area">
+                            <img class="searching" id="searchPic" src="./pic/search.svg">
+                            <input class="searching" id="searchbar" type="text" placeholder="" value="">
+                            <div class="searching" id="searchDropping">
+                                <div class="back-search" id="drop">
+                                    <div class="searchdrop" id="recent">RECENT SEARCHES</div>
+                                    <div class="searchdrop">
+                                        <div class="drop-list">beat by dre</div>
+                                        <div class="drop-list">scooby beat</div>
+                                        <div class="drop-list">dark melodic beats</div>
+                                        <div class="drop-list">ambient chill beats</div>
+                                        <div class="drop-list">sixnine beat</div>
+                                        <div class="drop-list">serpents slime gunna type beat</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top" id="topSides">
+                    <div class="top-buts" id="login">
+                        <div class="but-content">LOGIN</div>
+                    </div>
+
+                    <div class="top-buts" id="signup">
+                        <div class="but-content">SIGNUP</div>
+                    </div>
+
+                    <div class="top-buts">
+                        <img id="account" class="but-content" src="./pic/acc.svg">
+                    </div>
+                </div>
+
+                <div class="butDrops" id="butDrops">
+                    <div class="options">MY ACCOUNT</div>
+                    <div class="options">LOGIN</div>
+                    <div class="options">SIGNUP</div>
+                </div>
+
+            </div>  
+        </div>
+
+        <div class="row" id="resizeHead">
+            <div class="bodyAccountR" id="bodyAccountR">
+                <div class="paneR" id="paneR">
+                    <div class="proPicR"></div>
+                    <div class="detailsR" id="detailsR">
+                        <div class="paneHeadingR" id="paneHeadingR">JOHN DOE</div>
+                        <div class="set1R setsR" id="set1R">
+                            <div class="followR col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5" id="followR">Follow</div>
+                            <div class="messageR col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5" id="messageR">Message</div>
+                        </div>
+                        <div class="set2R setsR" id="set2R">
+                            <div class="followersR">
+                                <span class="amtR">53.9K <br></span> FOLLOWERS
+                            </div>
+
+                            <div class="followersR">
+                                <span class="amtR">2.5M <br></span> PLAYS
+                            </div>
+                            
+                            <div class="followersR">
+                                <span class="amtR">491 <br></span> TRACKS
+                            </div>
+                        </div>
+                        
+                        <div class="set3R" id="set3R">
+                            <div class="youR thumbsR"></div>
+                            <div class="instaR thumbsR"></div>
+                            <div class="faceR thumbsR"></div>
+                            <div class="tweetR thumbsR"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="heads">
+            <div class="headings" id="headings">
+                <img class="heading" src="./pic/adjust.svg">
+                <div id="firstHead" class="heading">FEED</div>
+                <div class="heading">TRACKS</div>
+                <div class="heading">MESSAGES</div>
+            </div>
+            <svg id="animeCircle" height="13" width="40%">
+                    <circle id="circ" cx="159" cy="5" r="3" fill="#FDE8E9"/>   
+            </svg>
+        </div>
+
+        <div class="row" id="bodies">
+            <div class="bodyCenter" onwheel="scrollz(event)">
+                <div class="chartContainer" id="chartContainer">
+                    <div class="nonCharts col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" id="nonCharts">
+                        <div class="buyers bodyDetail" id="buyers">
+                            
+                            <div class="buyerHeading">Top Buyers</div>
+    
+                            <div class="buyRows rows">
+                                <div class="text">Muselky</div>
+                                <div class="price">$900.90</div>
+                            </div>
+                            
+                            <div class="buyRows rows">
+                                <div class="text">Beat Dropster</div>
+                                <div class="price">$400.50</div>
+                            </div>
+    
+                            <div class="buyRows rows">
+                                <div class="text">Lil Beat</div>
+                                <div class="price">$300.25</div>
+                            </div>
+    
+                            <div class="buyRows rows">
+                                <div class="text">Beat9nine</div>
+                                <div class="price">$90.00</div>
+                            </div>
+                        </div>
+    
+                        <div class="listens bodyDetail" id="listens">
+                     
+                            <div class="listensHeading">Top Listeners</div>
+                            <div class="listensLabel">PLAYS</div>
+    
+                            <div class="listensRows lRows">
+                                <div class="text">Three Mil Racks</div>
+                                <div class="price">1600</div>
+                            </div>
+                            
+                            <div class="listensRows lRows">
+                                <div class="text">Serpent's Nest</div>
+                                <div class="price">1001</div>
+                            </div>
+    
+                            <div class="listensRows lRows">
+                                <div class="text">Angel's Eye</div>
+                                <div class="price">700</div>
+                            </div>
+    
+                            <div class="listensRows lRows">
+                                <div class="text">Melodic</div>
+                                <div class="price">678</div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="charts col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7" id="charts">
+                        <div class="monProgress bodyDetail" id="monProgress">
+                            <div class="monHeading">Monetary Progress</div>
+                            <div class="img-fluid monBody" id="monBody"></div>
+                        </div>
+                        <div class="beatStats bodyDetail" id="beatStats">
+                            <div class="beatHeading">Beat Statistics</div>
+                            <div class="img-fluid beatBody" id="beatBody"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bodyScroll">
+                <div class="scroll">
+                    <div class="scrollThumb"></div>
+                </div>   
+            </div>
+
+            <div class="bodyAccount" id="bodyAccount">
+                <div class="pane">
+                    <div class="paneHeading">JOHN DOE</div>
+                    <div class="proPic col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"></div>
+                    <div class="set1 sets" id="set1">
+                        <div class="follow col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5" id="follow">Follow</div>
+                        <div class="message col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5" id="message">Message</div>
+                    </div>
+                    <div class="set2 sets" id="set2">
+                        <div class="followers">
+                            <span class="amt">53.9K <br></span> FOLLOWERS
+                        </div>
+
+                        <div class="followers">
+                            <span class="amt">2.5M <br></span> PLAYS
+                        </div>
+                        
+                        <div class="followers">
+                            <span class="amt">491 <br></span> TRACKS
+                        </div>
+                    </div>
+                    
+                    <div class="set3" id="set3">
+                        <div class="you thumbs"></div>
+                        <div class="insta thumbs"></div>
+                        <div class="face thumbs"></div>
+                        <div class="tweet thumbs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------ -->
+
+        <div class="trackContainer">
+            <div class="slideContainer"> 
+                <span class="sliderBar">
+                    <span class="bar"></span>
+                </span>
+                <input type="range" min="0" max="100" value="0" id="myRange" class="slider">               
+            </div>   
+        </div>
+        
+        <div id ="musicGuide">
+            <img id="play" src="./pic/pause.svg"/>
+            <img id="updown" src="./pic/updown.svg"/>
+        </div>
+
+        <div class="card" id="cards">
+            <div class="cardInner" id="cardInner">
+                <div class="cardBackContainer">
+                    <div class="cardBack"></div>
+                </div>
+
+                <div class="cardShow">
+                    <div class="oneLine"></div>
+                    <div class="twoLine"></div>
+                    <div class="threeLine">
+                        <div class="backNext"></div>
+                        <div class="plays"></div>
+                        <div class="forwardNext"></div>
+                    </div>
+                    <div class="fourLine"></div>
+                </div>
+                
+            </div>
+            <svg id="circleExpand" height="20" width="8">
+                <clippath id="clippy">
+                    <rect id="grow" x="0" y="0" height="20" width="8" fill="red"/>   
+                    <rect id="grow2" x="0" y="535" height="20" width="8" fill="blue"/>  
+                </clippath>  
+            </svg>
+        </div>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    
+    <script src="https://unpkg.com/three@0.118.2/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+    <script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+    <script src="http://threejs.org/examples/js/controls/OrbitControls.js"></script> 
+
+    <script src=".\AccountPage\topStuff.js"></script>
+    <script src=".\AccountPage\topAnime.js"></script>
+    <script src=".\AccountPage\heads.js"></script>
+    <script src=".\AccountPage\music.js"></script>
+    <script src=".\AccountPage\record.js"></script>
+    <script src=".\AccountPage\scroll.js"></script>
+    <script src=".\AccountPage\respond.js"></script>        
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rum+Raisin:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ruluko:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <div id="cursors"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 header">
+
+                <div class="top">
+                    <div class="clipping">
+                        <div id="block"></div>
+                        <div id="glass"></div>
+                        <svg id="logo" width="110" height="45">
+                            <defs>
+                                <text id="text" x="0" y="40">Beet</text>
+                            </defs> 
+                            <use xlink:href="#text"/> 
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="top" id="searchSec">
+                    <div class="search">
+                        <div class="search-text" id="search-text">HIT 'ENTER' TO SEARCH</div>
+                        <div class="search-area" id="search-area">
+                            <img class="searching" id="searchPic" src="./pic/search.svg">
+                            <input class="searching" id="searchbar" type="text" placeholder="" value="">
+                            <div class="searching" id="searchDropping">
+                                <div class="back-search" id="drop">
+                                    <div class="searchdrop" id="recent">RECENT SEARCHES</div>
+                                    <div class="searchdrop">
+                                        <div class="drop-list">beat by dre</div>
+                                        <div class="drop-list">scooby beat</div>
+                                        <div class="drop-list">dark melodic beats</div>
+                                        <div class="drop-list">ambient chill beats</div>
+                                        <div class="drop-list">sixnine beat</div>
+                                        <div class="drop-list">serpents slime gunna type beat</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top" id="topSides">
+                    <div class="top-buts" id="login">
+                        <div class="but-content">LOGIN</div>
+                    </div>
+
+                    <div class="top-buts" id="signup">
+                        <div class="but-content">SIGNUP</div>
+                    </div>
+
+                    <div class="top-buts">
+                        <img id="account" class="but-content" src="./pic/acc.svg">
+                    </div>
+                </div>
+
+                <div class="butDrops" id="butDrops">
+                    <div class="options">MY ACCOUNT</div>
+                    <div class="options">LOGIN</div>
+                    <div class="options">SIGNUP</div>
+                </div>
+
+            </div>  
+        </div>
+
+        <div class="row" id="heads">
+            <div class="headings" id="headings">
+                <img class="heading" src="./pic/adjust.svg">
+                <div id="firstHead" class="heading">TRENDING</div>
+                <div class="heading">NEW RELEASES</div>
+                <div class="heading">RECOMMENDED</div>
+            </div>
+            <svg id="animeCircle" height="13" width="40%">
+                    <circle id="circ" cx="159" cy="5" r="3" fill="#FDE8E9"/>   
+            </svg>
+        </div>
+
+        <div class="row" id="bodies">
+            <div class="bodyCenter" onwheel="scrollz(event)"></div>
+
+            <div class="bodyScroll">
+                <div class="scroll">
+                    <div class="scrollThumb"></div>
+                </div>   
+            </div>
+
+            <div class="bodyText" id="bodyText">
+                <div class="text">TRENDING</div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------ -->
+
+        <div class="trackContainer">
+            <div class="slideContainer"> 
+                <span class="sliderBar">
+                    <span class="bar"></span>
+                </span>
+                <input type="range" min="0" max="100" value="0" id="myRange" class="slider">               
+            </div>   
+        </div>
+        
+        <div id ="musicGuide">
+            <img id="play" src="./pic/pause.svg"/>
+            <img id="updown" src="./pic/updown.svg"/>
+        </div>
+
+        <div class="card" id="cards">
+            <div class="cardInner">
+                <div class="cardBackContainer">
+                    <div class="cardBack"></div>
+                </div>
+
+                <div class="cardShow">
+                    <div class="oneLine"></div>
+                    <div class="twoLine"></div>
+                    <div class="threeLine">
+                        <div class="backNext"></div>
+                        <div class="plays"></div>
+                        <div class="forwardNext"></div>
+                    </div>
+                    <div class="fourLine"></div>
+                </div>
+                
+            </div>
+            <svg id="circleExpand" height="20" width="8">
+                <clippath id="clippy">
+                    <rect id="grow" x="0" y="0" height="20" width="8" fill="red"/>   
+                    <rect id="grow2" x="0" y="535" height="20" width="8" fill="blue"/>  
+                </clippath>  
+            </svg>
+        </div>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    
+    <script src="https://unpkg.com/three@0.118.2/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/renderers/CSS3DRenderer.js"></script>
+    <script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+    <script src="http://threejs.org/examples/js/controls/OrbitControls.js"></script> 
+
+    <script src=".\MainPage\topStuff.js"></script>
+    <script src=".\MainPage\topAnime.js"></script>
+    <script src=".\MainPage\music.js"></script>
+    <script src=".\MainPage\itmObj.js"></script>
+    <script src=".\MainPage\heads.js"></script>
+    <script src=".\MainPage\scroll.js"></script>
+    <script src=".\MainPage\respond.js"></script>
+    <script src=".\MainPage\record.js"></script>
+    <script src=".\MainPage\bodyAnime.js"></script>
+        
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
